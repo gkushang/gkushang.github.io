@@ -4,6 +4,16 @@
 <p>Codeceptjs-BDD integrates the Playwright with WebDriver.</p>
 <h2>🚀 To run on Playwright</h2>
 <p>If you have setup framework through the Codeceptjs-BDD <a href="/01-getting-started/1-quick-start/">CLI</a>, then you’d have an option to select Default driver. If it is default, then you can follow the <a href="/06-execution/1-run-locally/">execution</a> documentation. If it is not default, then you can pass <code class="language-text">DRIVER</code> command shown below,</p>
+<p>You can also define <code class="language-text">DRIVER</code> environment variable in your <code class="language-text">dev.codecept.secrets</code> file which won’t be commmitted to the source contol and becomes your personalized local development environment.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># file: config/dev.codecept.defaults</span>
+
+<span class="token comment"># ... Other ENV variables</span>
+
+<span class="token comment"># DRIVER ENV</span>
+DRIVER <span class="token operator">=</span> playwright
+
+<span class="token comment"># ... Other ENV variables</span></code></pre></div>
+<p>Alternatively, you can pass <code class="language-text">DRIVER</code> value at the runtime,</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">DRIVER</span><span class="token operator">=</span>Playwright <span class="token function">yarn</span> acceptance</code></pre></div>
 <p>Default browser for Playwright is <code class="language-text">chromium</code></p>
 <p>But, if you have defined your default driver as Playwright, then you do not need to pass <code class="language-text">DRIVER</code> command, and you can simply run your tests with below commands,</p>

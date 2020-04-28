@@ -3,13 +3,13 @@
 <h3>Types of ENV files</h3>
 <ol>
 <li>
-<p><code class="language-text">dev.codecept.defaults</code></p>
+<p><code class="language-text">codecept.env</code></p>
 <ul>
 <li>Common configuration defaults across all environments</li>
 </ul>
 </li>
 <li>
-<p><code class="language-text">dev.codecept.secrets</code></p>
+<p><code class="language-text">codecept.dev.env</code></p>
 <ul>
 <li>The Environment specific configurations or properties</li>
 </ul>
@@ -18,11 +18,11 @@
 <p>The format is a series of key-value pairs. Any line starting with # or ; are commented out and ignored.</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">HOST</span><span class="token operator">=</span>https://localhost
  <span class="token assign-left variable">END_POINT</span><span class="token operator">=</span>/</code></pre></div>
-<h2>dev.codecept.defaults</h2>
+<h2>codecept.env</h2>
 <p>This file contains all your default environment variables, such as common Environment Variables across all your test environements, such as DRIVER, CODECEPT<em>RELATIVE</em>PATH etc.</p>
-<p>It contains overall app configuration values that would be common across environments. The <strong>dev.codecept.defaults</strong> file is loaded first and then the <strong>dev.codecept.secrets</strong> file is loaded and will overwrite any values from the <em>dev.codecept.defaults</em> file.</p>
+<p>It contains overall app configuration values that would be common across environments. The <strong>codecept.env</strong> file is loaded first and then the <strong>codecept.dev.env</strong> file is loaded and will overwrite any values from the <em>codecept.env</em> file.</p>
 <p><strong>Example:</strong></p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># // config/dev.codecept.defaults</span>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># // config/codecept.env</span>
 
 <span class="token comment">#############################################################################################</span>
 <span class="token comment">#                                                                                           #</span>
@@ -43,20 +43,21 @@
 <span class="token comment"># APP ENV</span>
 <span class="token assign-left variable">HOST</span><span class="token operator">=</span>github.com <span class="token comment"># edit your default host. Preffered is localhost where your App is running</span>
 <span class="token assign-left variable">END_POINT</span><span class="token operator">=</span>/</code></pre></div>
-<h2>dev.codecept.secrets</h2>
+<h2>codecept.dev.env</h2>
+<p>Your Local Development Environmental Variables. Personalize your Execution Environment.</p>
 <p>This file contains all the Secrets and Password for your App. You must not commit this file to the Source Control because it contains sensitive information such as usernames, passwords, api keys, etc. The format is a series of key-value pairs. Any line starting with # or ; are commented out and ignored.</p>
 <p>Because you do not committ this file to the source control, how do your teammates know what are the keys and how to define them?</p>
 <h4>Sharing With Your Team</h4>
-<p><strong>dev.codecept.secrets.example</strong></p>
-<p>When your <em>dev.codecept.secrets</em> file is not pushed to source control (which it shouldn’t be), it is important to make it clear to everyone what the shape of that file should look like. The technique we recommend is to create a file named <strong>dev.codecept.secrets.example</strong> that contains the variables, but with fake values. This file might look something like the following template.</p>
+<p><strong>codecept.dev.env.example</strong></p>
+<p>When your <em>codecept.dev.env</em> file is not pushed to source control (which it shouldn’t be), it is important to make it clear to everyone what the shape of that file should look like. The technique we recommend is to create a file named <strong>codecept.dev.env.example</strong> that contains the variables, but with fake values. This file might look something like the following template.</p>
 <p><strong>Example:</strong></p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment">#############################################################################################</span>
 <span class="token comment">#                                                                                           #</span>
-<span class="token comment">#   THIS IS THE EXAMPLE ENV FILE, EDIT THE VALUES AND SAVE AS `dev.codecept.secrets` file   #</span>
+<span class="token comment">#   THIS IS THE EXAMPLE ENV FILE, EDIT THE VALUES AND SAVE AS `codecept.dev.env` file   #</span>
 <span class="token comment">#                                                                                           #</span>
 <span class="token comment">#############################################################################################</span>
 
-<span class="token comment"># // config/dev.codecept.secrets.example</span>
+<span class="token comment"># // config/codecept.dev.env.example</span>
 
 <span class="token comment"># SAUCE LABS SECRETS</span>
 <span class="token assign-left variable">SAUCE_USERNAME</span><span class="token operator">=</span><span class="token operator">&lt;</span>enter-your-saucelabs-username<span class="token operator">&gt;</span>

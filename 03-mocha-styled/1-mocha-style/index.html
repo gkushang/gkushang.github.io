@@ -27,14 +27,13 @@
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// acceptance/mocha/login.spec.js</span>
 
 <span class="token comment">/* FEATURE */</span>
-<span class="token function">Feature</span><span class="token punctuation">(</span><span class="token string">&#x27;Login Tests (mocha)&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span>&#x27;@login<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
+<span class="token function">Feature</span><span class="token punctuation">(</span><span class="token string">&#x27;Login Tests (mocha)&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token string">&#x27;@login&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">/* BEFORE */</span>
-<span class="token function">Before</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token constant">I</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// or Background</span>
+<span class="token function">Before</span><span class="token punctuation">(</span><span class="token parameter"><span class="token constant">I</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// or Background</span>
   <span class="token constant">I</span><span class="token punctuation">.</span><span class="token function">amOnPage</span><span class="token punctuation">(</span><span class="token string">&#x27;/login&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
 
 <span class="token comment">/* SCENARIOS */</span>
 <span class="token function">Scenario</span><span class="token punctuation">(</span><span class="token string">&#x27;Fred logs in successfully&#x27;</span><span class="token punctuation">,</span> <span class="token parameter"><span class="token constant">I</span></span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>

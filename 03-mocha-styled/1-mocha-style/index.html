@@ -49,8 +49,9 @@
   <span class="token comment">// login and assertions</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <h5>Execute</h5>
-<p>Execution of Mocha-styled scenario are dong thru the same script. Below command runs both BDD-Fearures, if exists, and all your Mocha-styled scenarios. Please note, BDD-Features will run before the Mocha-styled scenarios.</p>
+<p>Execution of Mocha-styled scenario are done thru the same script. Below command runs both BDD-Fearures, if exists, and all your Mocha-styled scenarios. Please note, BDD-Features will run before the Mocha-styled scenarios.</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">yarn acceptance</code></pre></div>
+<p>e.g. to run above Mocha-styled feature,</p>
 <div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">yarn acceptance <span class="token operator">--</span>grep @login</code></pre></div>
 <h5>Override the default *.spec.js extention</h5>
 <p>If you decide to change the mocha-style scenarios extention to different than <code class="language-text">*.spec.js</code>, then you are required to update your Projects configuration as shown below,</p>

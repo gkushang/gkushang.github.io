@@ -33,12 +33,16 @@ DRIVER <span class="token operator">=</span> playwright
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">DRIVER</span><span class="token operator">=</span>Playwright <span class="token function">yarn</span> acceptance</code></pre></div>
 <p>Default browser for Playwright is <code class="language-text">chromium</code></p>
 <p>But, if you have defined your default driver as Playwright, then you do not need to pass <code class="language-text">DRIVER</code> command, and you can simply run your tests with below commands,</p>
+<p><strong>Run Headless</strong></p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">yarn</span> acceptance</code></pre></div>
 <p>To run on Playwright’s Safari or WebKit,</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">yarn</span> acceptance --profile safari
 <span class="token function">yarn</span> acceptance --profile webkit</code></pre></div>
 <p>To run on Playwright’s Firefox,</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token function">yarn</span> acceptance --profile firefox</code></pre></div>
+<p><strong>Run with Head: SHOW</strong></p>
+<p>Add <code class="language-text">SHOW</code> enviornment varialbel to run with the Head. It will launch the browser.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">SHOW</span><span class="token operator">=</span>true <span class="token function">yarn</span> acceptance</code></pre></div>
 <h4>👉 Please note: Playwright support was added from the version 4</h4>
 <h3>+ Add Playwright support for existing framework before version 4</h3>
 <p>Please note: The Playwright support was included with the <code class="language-text">codeceptjs-shared@4</code> version. If you have previous version installed, please update your <code class="language-text">codecept.conf.js</code> declaration and dependencies as defined <a href="https://github.com/gkushang/codeceptjs-bdd/blob/develop/packages/codeceptjs-cucumber/codecept.conf.js#L1-L7">here</a> and update your config creation as defined <a href="https://github.com/gkushang/codeceptjs-bdd/blob/develop/packages/codeceptjs-cucumber/codecept.conf.js#L42">here</a>.</p>
